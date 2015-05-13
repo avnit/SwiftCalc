@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  SwiftCalc
+//  Calculator
 //
 //  Created by Avnit Bambah on 5/13/15.
 //  Copyright (c) 2015 Avnit Bambah. All rights reserved.
@@ -8,10 +8,7 @@
 
 import UIKit
 
-
 class ViewController: UIViewController {
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
