@@ -15,6 +15,7 @@
 		DC3BA2171B027DED00388F97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC3BA2161B027DED00388F97 /* Images.xcassets */; };
 		DC3BA21A1B027DED00388F97 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3BA2181B027DED00388F97 /* LaunchScreen.xib */; };
 		DC3BA2261B027DED00388F97 /* XRunnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA2251B027DED00388F97 /* XRunnerTests.m */; };
+		DC3BA2311B027EA700388F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3BA2301B027EA700388F97 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +25,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = DC3BA2031B027DED00388F97;
 			remoteInfo = XRunner;
+		};
+		DC3BA2621B02810700388F97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC3BA25D1B02810600388F97 /* XRunner.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC3BA23B1B02810600388F97;
+			remoteInfo = XRunner;
+		};
+		DC3BA2641B02810700388F97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC3BA25D1B02810600388F97 /* XRunner.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC3BA24D1B02810600388F97;
+			remoteInfo = XRunnerTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -42,6 +57,9 @@
 		DC3BA21F1B027DED00388F97 /* XRunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XRunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC3BA2241B027DED00388F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC3BA2251B027DED00388F97 /* XRunnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRunnerTests.m; sourceTree = "<group>"; };
+		DC3BA22F1B027EA600388F97 /* XRunner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XRunner-Bridging-Header.h"; sourceTree = "<group>"; };
+		DC3BA2301B027EA700388F97 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC3BA25D1B02810600388F97 /* XRunner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XRunner.xcodeproj; path = XRunner/XRunner.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,7 @@
 		DC3BA2061B027DED00388F97 /* XRunner */ = {
 			isa = PBXGroup;
 			children = (
+				DC3BA25D1B02810600388F97 /* XRunner.xcodeproj */,
 				DC3BA20B1B027DED00388F97 /* AppDelegate.h */,
 				DC3BA20C1B027DED00388F97 /* AppDelegate.m */,
 				DC3BA20E1B027DED00388F97 /* art.scnassets */,
@@ -92,6 +111,8 @@
 				DC3BA2161B027DED00388F97 /* Images.xcassets */,
 				DC3BA2181B027DED00388F97 /* LaunchScreen.xib */,
 				DC3BA2071B027DED00388F97 /* Supporting Files */,
+				DC3BA2301B027EA700388F97 /* AppDelegate.swift */,
+				DC3BA22F1B027EA600388F97 /* XRunner-Bridging-Header.h */,
 			);
 			path = XRunner;
 			sourceTree = "<group>";
@@ -120,6 +141,15 @@
 				DC3BA2241B027DED00388F97 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DC3BA25E1B02810600388F97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DC3BA2631B02810700388F97 /* XRunner.app */,
+				DC3BA2651B02810700388F97 /* XRunnerTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +219,12 @@
 			mainGroup = DC3BA1FB1B027DED00388F97;
 			productRefGroup = DC3BA2051B027DED00388F97 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DC3BA25E1B02810600388F97 /* Products */;
+					ProjectRef = DC3BA25D1B02810600388F97 /* XRunner.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DC3BA2031B027DED00388F97 /* XRunner */,
@@ -196,6 +232,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DC3BA2631B02810700388F97 /* XRunner.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = XRunner.app;
+			remoteRef = DC3BA2621B02810700388F97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DC3BA2651B02810700388F97 /* XRunnerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XRunnerTests.xctest;
+			remoteRef = DC3BA2641B02810700388F97 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DC3BA2021B027DED00388F97 /* Resources */ = {
@@ -223,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC3BA2311B027EA700388F97 /* AppDelegate.swift in Sources */,
 				DC3BA20D1B027DED00388F97 /* AppDelegate.m in Sources */,
 				DC3BA2121B027DED00388F97 /* GameViewController.m in Sources */,
 				DC3BA20A1B027DED00388F97 /* main.m in Sources */,
@@ -353,9 +407,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = XRunner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XRunner/XRunner-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -363,9 +420,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = XRunner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XRunner/XRunner-Bridging-Header.h";
 			};
 			name = Release;
 		};
