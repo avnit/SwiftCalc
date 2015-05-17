@@ -33,24 +33,10 @@ class calculator
         return ((loanAmount * term * interestRate) / 100) + loanAmount
     }
     func  mtgViewController() -> UIView  {
-        let handler: () -> Void
-      
-        
-        init( handler: () -> Void) {
-            self.handler = handler
-            
-            super.init(frame: CGRectZero)
-            
-            self.textAlignment = .Center
-            self.layer.borderWidth = 0.5
-            self.font = UIFont.systemFontOfSize(45)
-            self.adjustsFontSizeToFitWidth = true
-            self.userInteractionEnabled = true
-            
-            self.text = type.label
-            self.setTranslatesAutoresizingMaskIntoConstraints(false)
-        }
-    
+        let root = UIView(frame: CGRect(x:0, y:0 , width:640 , height:1136))
+        root.backgroundColor = UIColor.darkGrayColor()
+       // row.addSubView(view)
+       return root
     }
 }
 
