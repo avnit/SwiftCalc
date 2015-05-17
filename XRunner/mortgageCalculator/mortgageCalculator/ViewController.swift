@@ -32,6 +32,26 @@ class calculator
     {
         return ((loanAmount * term * interestRate) / 100) + loanAmount
     }
+    func  mtgViewController() -> UIView  {
+        let handler: () -> Void
+      
+        
+        init( handler: () -> Void) {
+            self.handler = handler
+            
+            super.init(frame: CGRectZero)
+            
+            self.textAlignment = .Center
+            self.layer.borderWidth = 0.5
+            self.font = UIFont.systemFontOfSize(45)
+            self.adjustsFontSizeToFitWidth = true
+            self.userInteractionEnabled = true
+            
+            self.text = type.label
+            self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        }
+    
+    }
 }
 
 var loanAmount: Double = 8000000.00
@@ -53,6 +73,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view = a.mtgViewController()
     }
 
     override func didReceiveMemoryWarning() {
