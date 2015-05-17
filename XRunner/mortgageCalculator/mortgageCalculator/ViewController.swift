@@ -34,7 +34,22 @@ class calculator
     }
     func  mtgViewController() -> UIView  {
         let root = UIView(frame: CGRect(x:0, y:0 , width:640 , height:1136))
-        root.backgroundColor = UIColor.darkGrayColor()
+        root.backgroundColor = UIColor.whiteColor()
+        
+        //adding label this is mtg calculator
+        var label = UILabel(frame: CGRectMake(0, 0, 120,120))
+        label.center = CGPointMake(100, 100)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Avnit's Mortage calculator"
+        root.addSubview(label)
+        
+       // <#x: CGFloat#>
+        var input_label = UILabel(frame: CGRectMake(10,10,100,100))
+        label.center = CGPointMake(200,200)
+        label.textAlignment = NSTextAlignment.Justified
+        label.text = "Initial Amount"
+        root.addSubview(input_label)
+        
        // row.addSubView(view)
        return root
     }
