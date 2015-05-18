@@ -120,9 +120,11 @@ class ViewController: UIViewController {
     
     func calculate( loanAmount: Double, term: Double, interestRate: Double ) ->Double
     {
-        let output_fn: Double = ((loanAmount * term * interestRate) / 100 ) + loanAmount
+        //let output_fn: Double = ((loanAmount * term * interestRate) / 100 ) + loanAmount
+        
+        let output_fn: Double = loanAmount * (pow((1.0 + (interestRate/100)) , term ))
         println("Output is \(output_fn)")
-        return output_fn / (term * 12 )
+        return output_fn/(term * 12)
     }
     
     @IBAction func ButtonCalculate(sender: AnyObject) {
