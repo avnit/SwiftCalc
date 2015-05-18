@@ -35,7 +35,9 @@ class calculator
     
     func calculate( loanAmount: Double, term: Double, interestRate: Double ) ->Double
     {
-        return ((loanAmount * term * interestRate) / 100) + loanAmount
+        let output_fn: Double = ((loanAmount * term * interestRate) / 100 ) + loanAmount
+        println("Output is \(output_fn)")
+        return output_fn
     }
     func  mtgViewController() -> UIView  {
         let root = UIView(frame: CGRect(x:0, y:0 , width:640 , height:1136))
@@ -82,11 +84,24 @@ var loanAmount: Double = 8000000.00
 var term: Double = 1.0
 var interestRate: Double = 9.0
 
-var a = calculator()
-var result: Double = a.calculate(loanAmount, term: term, interestRate: interestRate)
+
+//var result: Double = a.calculate(loanAmount, term: term, interestRate: interestRate)
 
 
+extension String {
+    var floatValue: Float {
+        return (self as NSString).floatValue
+    }
+    var doubleValue: Double {
+        return (self as NSString).doubleValue
+    }
+}
 
+extension Double {
+    var stringValue: String {
+        return ((self as NSNumber).stringValue as String)
+    }
+}
 
 
 
@@ -94,15 +109,26 @@ var result: Double = a.calculate(loanAmount, term: term, interestRate: interestR
 
 class ViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.view = a.mtgViewController()
+    @IBOutlet weak var inputAmount: UITextField!
+    
+    @IBOutlet weak var inputterm: UITextField!
+    
+    @IBOutlet weak var inputInterestRate: UITextField!
+    
+    
+    @IBOutlet weak var OutputPayments: UITextField!
+    
+    func calculate( loanAmount: Double, term: Double, interestRate: Double ) ->Double
+    {
+        let output_fn: Double = ((loanAmount * term * interestRate) / 100 ) + loanAmount
+        println("Output is \(output_fn)")
+        return output_fn / (term * 12 )
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func ButtonCalculate(sender: AnyObject) {
+     //   var a: calculator = calculator()
+        var text_output: Double = calculate(inputAmount.text.doubleValue , term: inputterm.text.doubleValue, interestRate: inputInterestRate.text.doubleValue)
+        OutputPayments.text = text_output.stringValue
     }
     
     
