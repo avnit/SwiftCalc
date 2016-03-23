@@ -30,13 +30,13 @@ namespace AcousticalModeling
         int numRowsFilled = 0;
 
         Wall[] Walls = new Wall[6];
-        double[] WallOneCoef = new double [6];
+        double[] WallOneCoef = new double[6];
         double[] WallTwoCoef = new double[6];
         double[] WallThreeCoef = new double[6];
         double[] WallFourCoef = new double[6];
         double[] WallFiveCoef = new double[6];
         double[] WallSixCoef = new double[6];
-        public double[][] global = new double [6][];
+        public double[][] global = new double[6][];
 
 
         List<Materials> SelectMaterials = new List<Materials>();
@@ -57,12 +57,12 @@ namespace AcousticalModeling
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,14 +70,14 @@ namespace AcousticalModeling
             //WallMaterials WallOne = new WallMaterials();
             //WallOne.Show();
         }
-        
-        public double[] material (string materialInput, double[] values)
+
+        public double[] material(string materialInput, double[] values)
         {
             double[] mv = new double[6];
 
-              //  Walls[1].SetMaterial(WallM.ConcreteTile);
+            //  Walls[1].SetMaterial(WallM.ConcreteTile);
             return mv;
-           // WallTwoCoef = new double[] { WallM.Coefficients[0]._htz125, WallM.Coefficients[0]._htz250, WallM.Coefficients[0]._htz500, WallM.Coefficients[0]._htz1k, WallM.Coefficients[0]._htz2k, WallM.Coefficients[0]._htz4k };
+            // WallTwoCoef = new double[] { WallM.Coefficients[0]._htz125, WallM.Coefficients[0]._htz250, WallM.Coefficients[0]._htz500, WallM.Coefficients[0]._htz1k, WallM.Coefficients[0]._htz2k, WallM.Coefficients[0]._htz4k };
         }
 
 
@@ -232,7 +232,7 @@ namespace AcousticalModeling
                 WallThreeCoef = new double[] { WallM.Coefficients[10]._htz125, WallM.Coefficients[10]._htz250, WallM.Coefficients[10]._htz500, WallM.Coefficients[10]._htz1k, WallM.Coefficients[10]._htz2k, WallM.Coefficients[10]._htz4k };
 
             }
-         }
+        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -293,7 +293,7 @@ namespace AcousticalModeling
 
 
 
-            }
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -366,7 +366,7 @@ namespace AcousticalModeling
             }
 
 
-            }
+        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -439,9 +439,9 @@ namespace AcousticalModeling
             }
 
 
-            }
+        }
 
-        private void button7_Click(object sender,EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
 
             double height, width, depth, volume, length, area, C, RT60125;
@@ -463,7 +463,7 @@ namespace AcousticalModeling
             Wall WallFive = new Wall("WallFive", Convert.ToDouble(textBox15.Text), Convert.ToDouble(textBox1.Text));
             Wall WallSix = new Wall("WallSix", Convert.ToDouble(textBox2.Text), Convert.ToDouble(textBox3.Text));
 
-            WallOne.area(WallOne._length,WallOne._height);
+            WallOne.area(WallOne._length, WallOne._height);
             WallTwo.area(WallOne._length, WallTwo._height);
             WallThree.area(WallOne._length, WallThree._height);
             WallFour.area(WallOne._length, WallFour._height);
@@ -484,22 +484,22 @@ namespace AcousticalModeling
             //only change the label # keep the same htz125. So you will need to copy and paste six times for six wall surfaces. Label 38 = 125hz 
 
             label38.Text = (Convert.ToInt32(100.0 * ((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((WallM.Coefficients[0]._htz125) + (WallM.Coefficients[1]._htz125) + (WallM.Coefficients[2]._htz125) + (WallM.Coefficients[3]._htz125) +
-                (WallM.Coefficients[4]._htz125) + (WallM.Coefficients[6]._htz125) + (WallM.Coefficients[7]._htz125) + (WallM.Coefficients[8]._htz125) + (WallM.Coefficients[9]._htz125) + (WallM.Coefficients[10]._htz125)) * ((Convert.ToDouble(label35.Text)))))/ 100.0).ToString();
+                (WallM.Coefficients[4]._htz125) + (WallM.Coefficients[6]._htz125) + (WallM.Coefficients[7]._htz125) + (WallM.Coefficients[8]._htz125) + (WallM.Coefficients[9]._htz125) + (WallM.Coefficients[10]._htz125)) * ((Convert.ToDouble(label35.Text))))) / 100.0).ToString();
 
             //250hz[1] _250hz
-            label44.Text = (Convert.ToInt32(100*((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[1]._htz250))))/100.0).ToString();
+            label44.Text = (Convert.ToInt32(100 * ((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[1]._htz250) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[1]._htz250)))) / 100.0).ToString();
 
             //500hz label59 [2] _500hz
-            label59.Text = (Convert.ToInt32(100*((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[2]._htz500))))/100.0).ToString();
+            label59.Text = (Convert.ToInt32(100 * ((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[2]._htz500) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[2]._htz500)))) / 100.0).ToString();
 
             // 1000hz label60 [3] _1000hz
-            label60.Text = (Convert.ToInt32(100*((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[3]._htz1k))))/100.0).ToString();
+            label60.Text = (Convert.ToInt32(100 * ((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[3]._htz1k) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[3]._htz1k)))) / 100.0).ToString();
 
             //2000 hz label61 [4] _2000hz
-            label61.Text = (Convert.ToInt32(((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[4]._htz2k))))/100.0).ToString();
+            label61.Text = (Convert.ToInt32(((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[4]._htz2k) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[4]._htz2k)))) / 100.0).ToString();
 
             //4000 hz label62 [5] _4000hz
-            label62.Text = (Convert.ToInt32(100*((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[5]._htz4k))))/100.0).ToString();
+            label62.Text = (Convert.ToInt32(100 * ((C * (Convert.ToDouble(textBox4.Text) * Convert.ToDouble(textBox5.Text) * Convert.ToDouble(textBox4.Text))) / ((Convert.ToDouble(label32.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label31.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label30.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label29.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label28.Text) * WallM.Coefficients[5]._htz4k) + (Convert.ToDouble(label27.Text) * WallM.Coefficients[5]._htz4k)))) / 100.0).ToString();
 
 
         }
@@ -535,8 +535,8 @@ namespace AcousticalModeling
 
         private void label32_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -609,29 +609,29 @@ namespace AcousticalModeling
             width = Convert.ToDouble(textBox5.Text);
             depth = Convert.ToDouble(textBox6.Text);
 
-            
+
             p = Convert.ToDouble(textBox16.Text);
             q = Convert.ToDouble(textBox17.Text);
             r = Convert.ToDouble(textBox18.Text);
 
             c = 1130;
-         
+
             F = c / 2 * Math.Sqrt((Math.Pow(p, 2) / Math.Pow(depth, 2) + Math.Pow(q, 2) / Math.Pow(Width, 2) + Math.Pow(r, 2) / Math.Pow(height, 2)));
             label40.Text = F.ToString("n");
         }
 
-        private void CreateW1_Click(object sender, EventArgs e)
+   /*     private void CreateW1_Click(object sender, EventArgs e)
         {
-            numRowsFilled  += 1;
+            numRowsFilled += 1;
             if (TileConcrete == true)
             {
                 Walls[0].SetMaterial(WallM.ConcreteTile);
 
 
-                WallOneCoef = new double [] { WallM.Coefficients[0]._htz125, WallM.Coefficients[0]._htz250, WallM.Coefficients[0]._htz500, WallM.Coefficients[0]._htz1k, WallM.Coefficients[0]._htz2k, WallM.Coefficients[0]._htz4k };
+                WallOneCoef = new double[] { WallM.Coefficients[0]._htz125, WallM.Coefficients[0]._htz250, WallM.Coefficients[0]._htz500, WallM.Coefficients[0]._htz1k, WallM.Coefficients[0]._htz2k, WallM.Coefficients[0]._htz4k };
             }
 
-            if ( WoodOnJoists == true)
+            if (WoodOnJoists == true)
             {
                 Walls[0].SetMaterial(WallM.WoodOnJoists);
 
@@ -650,7 +650,7 @@ namespace AcousticalModeling
             if (CarpetOnFoam == true)
             {
                 Walls[0].SetMaterial(WallM.CarpetOnFoam);
-;
+                ;
 
                 WallOneCoef = new double[] { WallM.Coefficients[3]._htz125, WallM.Coefficients[3]._htz250, WallM.Coefficients[3]._htz500, WallM.Coefficients[3]._htz1k, WallM.Coefficients[3]._htz2k, WallM.Coefficients[3]._htz4k };
             }
@@ -713,304 +713,122 @@ namespace AcousticalModeling
 
             //label44.Text = wall1Mat.wall1.name;
         }
+    */ 
 
-
-
-
-
-        private void button19_Click(object sender, EventArgs e)
+        public void updateTextIcon (string name )
         {
-            /*    TileConcrete = true;
-                WoodOnJoists = false;
-                CarpetOnConcrete = false;
-                CarpetOnFoam = false;
-                UnglazedBrick = false;
-                UnglazedPaintedBrick = false;
-                Glass = false;
-                MarbleTile = false;
-                PlywoodPanel = false;
-                AcousticCeilingTiles = false;
-                RoughPlasterOnLath = false; */
-            string Name = "TileConcrete";
             try
             {
                 SqlConnect sq = new SqlConnect();
-                SqlDataReader Data = sq.sqlMaterial(Name);
-
-                foreach (SqlDataReader s in Data)
+                Dictionary<string, Object> Mat = sq.sqlMaterial(Name);
+                foreach (var item in Mat)
                 {
-                    if (s.HasRows)
+                    Materials M = item.Value;
+                    label51.Text = M._htz125.ToString();
+                    label50.Text = M._htz250.ToString();
+                    label49.Text = M._htz500.ToString();
+                    label48.Text = M._htz1k.ToString();
+                    label47.Text = M._htz2k.ToString();
+                    label46.Text = M._htz4k.ToString();
 
-                    {
-                        while (s.Read())
-                        {
+                    sq.SqlInsertData((float)M._htz125, (float)M._htz250
+                        , (float)M._htz500, (float)M._htz1k, (float)M._htz2k,
+                        (float)M._htz4k);
 
-
-
-                            label51.Text = s["htz125"].ToString();
-                            label50.Text = s["htz250"].ToString();
-                            label49.Text = s["htz500"].ToString();
-                            label48.Text = s["htz1k"].ToString();
-                            label47.Text = s["htz2k"].ToString();
-                            label46.Text = s["htz4k"].ToString();
-
-                            sq.SqlInsertData((float)s["htz125"], (float)s["htz250"]
-                                , (float)s["htz500"], (float)s["htz1k"], (float)s["htz2k"],
-                                (float)s["htz4k"]);
-
-                        }
-
-
-                    }
                 }
 
+
             }
+
+
+
             catch (Exception ex)
             {
                 Console.Write("Error in the code" + ex.ToString()
                     );
 
             }
+        }
 
 
 
-
-            /*label51.Text = WallM.Coefficients[numRowsFilled]._htz125.ToString();
-            label50.Text = WallM.Coefficients[numRowsFilled]._htz250.ToString();
-            label49.Text = WallM.Coefficients[numRowsFilled]._htz500.ToString();
-            label48.Text = WallM.Coefficients[numRowsFilled]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[numRowsFilled]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[numRowsFilled]._htz4k.ToString();
-
-            label73.Text = WallM.Coefficients[numRowsFilled+1]._htz125.ToString();
-            label74.Text = WallM.Coefficients[numRowsFilled]._htz250.ToString();
-            label75.Text = WallM.Coefficients[0]._htz500.ToString();
-            label76.Text = WallM.Coefficients[0]._htz1k.ToString();
-            label77.Text = WallM.Coefficients[0]._htz2k.ToString();
-            label78.Text = WallM.Coefficients[0]._htz4k.ToString();*/
-
-
+        private void button19_Click(object sender, EventArgs e)
+        {
+            string Name = "TileConcrete";
+            updateTextIcon(Name);
 
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = true;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = false;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = false;
-            Glass = false;
-            MarbleTile = false;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = false;
+            string Name = "WoodOnJoists";
+            updateTextIcon(Name);
 
-            label51.Text = WallM.Coefficients[1]._htz125.ToString();
-            label50.Text = WallM.Coefficients[1]._htz250.ToString();
-            label49.Text = WallM.Coefficients[1]._htz500.ToString();
-            label48.Text = WallM.Coefficients[1]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[1]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[1]._htz4k.ToString();
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = true;
-            CarpetOnFoam = false;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = false;
-            Glass = false;
-            MarbleTile = false;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = false;
-
-            label51.Text = WallM.Coefficients[2]._htz125.ToString();
-            label50.Text = WallM.Coefficients[2]._htz250.ToString();
-            label49.Text = WallM.Coefficients[2]._htz500.ToString();
-            label48.Text = WallM.Coefficients[2]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[2]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[2]._htz4k.ToString();
+            string Name = "CarpetOnConcrete";
+            updateTextIcon(Name);
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = true;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = false;
-            Glass = false;
-            MarbleTile = false;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = false;
-
-            label51.Text = WallM.Coefficients[3]._htz125.ToString();
-            label50.Text = WallM.Coefficients[3]._htz250.ToString();
-            label49.Text = WallM.Coefficients[3]._htz500.ToString();
-            label48.Text = WallM.Coefficients[3]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[3]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[3]._htz4k.ToString();
+            string Name = "CarpetOnFoam";
+            updateTextIcon(Name);
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = false;
-            UnglazedBrick = true;
-            UnglazedPaintedBrick = false;
-            Glass = false;
-            MarbleTile = false;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = false;
-
-            label51.Text = WallM.Coefficients[4]._htz125.ToString();
-            label50.Text = WallM.Coefficients[4]._htz250.ToString();
-            label49.Text = WallM.Coefficients[4]._htz500.ToString();
-            label48.Text = WallM.Coefficients[4]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[4]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[4]._htz4k.ToString();
+            string Name = "UnglazedBrick";
+            updateTextIcon(Name);
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = false;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = true;
-            Glass = false;
-            MarbleTile = false;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = false;
-
-            label51.Text = WallM.Coefficients[5]._htz125.ToString();
-            label50.Text = WallM.Coefficients[5]._htz250.ToString();
-            label49.Text = WallM.Coefficients[5]._htz500.ToString();
-            label48.Text = WallM.Coefficients[5]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[5]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[5]._htz4k.ToString();
+            string Name = "UnglazedPaintedBrick";
+            updateTextIcon(Name);
+          
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = false;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = false;
-            Glass = true;
-            MarbleTile = false;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = false;
 
-            label51.Text = WallM.Coefficients[6]._htz125.ToString();
-            label50.Text = WallM.Coefficients[6]._htz250.ToString();
-            label49.Text = WallM.Coefficients[6]._htz500.ToString();
-            label48.Text = WallM.Coefficients[6]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[6]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[6]._htz4k.ToString();
+            string Name = "Glass";
+            updateTextIcon(Name);
+           
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = false;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = false;
-            Glass = false;
-            MarbleTile = true;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = false;
-
-            label51.Text = WallM.Coefficients[7]._htz125.ToString();
-            label50.Text = WallM.Coefficients[7]._htz250.ToString();
-            label49.Text = WallM.Coefficients[7]._htz500.ToString();
-            label48.Text = WallM.Coefficients[7]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[7]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[7]._htz4k.ToString();
+            string Name = "MarbleTile";
+            updateTextIcon(Name);
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = false;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = false;
-            Glass = false;
-            MarbleTile = false;
-            PlywoodPanel = true;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = false;
 
-            label51.Text = WallM.Coefficients[8]._htz125.ToString();
-            label50.Text = WallM.Coefficients[8]._htz250.ToString();
-            label49.Text = WallM.Coefficients[8]._htz500.ToString();
-            label48.Text = WallM.Coefficients[8]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[8]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[8]._htz4k.ToString();
+            string Name = "PlywoodPanel";
+            updateTextIcon(Name);
+
+          
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = false;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = false;
-            Glass = false;
-            MarbleTile = false;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = true;
-            RoughPlasterOnLath = false;
 
-            label51.Text = WallM.Coefficients[9]._htz125.ToString();
-            label50.Text = WallM.Coefficients[9]._htz250.ToString();
-            label49.Text = WallM.Coefficients[9]._htz500.ToString();
-            label48.Text = WallM.Coefficients[9]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[9]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[9]._htz4k.ToString();
+            string Name = "AcousticCeilingTiles";
+            updateTextIcon(Name);
+
+           
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            TileConcrete = false;
-            WoodOnJoists = false;
-            CarpetOnConcrete = false;
-            CarpetOnFoam = false;
-            UnglazedBrick = false;
-            UnglazedPaintedBrick = false;
-            Glass = false;
-            MarbleTile = false;
-            PlywoodPanel = false;
-            AcousticCeilingTiles = false;
-            RoughPlasterOnLath = true;
+            string Name = "RoughPlasterOnLath";
+            updateTextIcon(Name);
 
-            label51.Text = WallM.Coefficients[10]._htz125.ToString();
-            label50.Text = WallM.Coefficients[10]._htz250.ToString();
-            label49.Text = WallM.Coefficients[10]._htz500.ToString();
-            label48.Text = WallM.Coefficients[10]._htz1k.ToString();
-            label47.Text = WallM.Coefficients[10]._htz2k.ToString();
-            label46.Text = WallM.Coefficients[10]._htz4k.ToString();
         }
 
         private void label44_Click(object sender, EventArgs e)
@@ -1028,9 +846,6 @@ namespace AcousticalModeling
             label71.Text = ((Convert.ToDouble(label38.Text) + Convert.ToDouble(label44.Text) + Convert.ToDouble(label59.Text) + Convert.ToDouble(label60.Text) + Convert.ToDouble(label61.Text) + Convert.ToDouble(label62.Text)) / 6).ToString();
         }
 
-        private void label51_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
